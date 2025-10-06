@@ -1,4 +1,5 @@
 [My Linkedin](https://www.linkedin.com/in/jos%C3%A9-eduardo-souza-leite/)
+- pip install -r requirements.txt
 
 # Indice
 
