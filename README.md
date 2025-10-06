@@ -26,7 +26,7 @@
 
 <img width="833" height="450" alt="image" src="https://github.com/user-attachments/assets/9064a65c-c825-4b19-bf5c-7d005ea9c1e6" />
 
-# Module 35 - Exercise 1
+# Exercise 1 - Module 35
 
 This activity aims to continue the data analysis from the previous exercise. This time, I will explore the concept of multicollinearity, exploring its parameters, identification, and ways to address this problem that distorts the model.
 
