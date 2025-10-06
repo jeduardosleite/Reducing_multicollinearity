@@ -1,5 +1,7 @@
 [My Linkedin](https://www.linkedin.com/in/jos%C3%A9-eduardo-souza-leite/)
 
+# Indice
+
 - [Introduction](#module-35---exercise-1)
 - [Packs](#packs)
 - [Dataset](#dataset)
@@ -31,6 +33,9 @@ Initially, I won't focus on improving R-squared, but rather on increasing its F-
 
 Another important point for this exercise is that I will be using the last 3 months.
 
+[🔝 Back to indice](#Indice)
+---
+
 ## Packs
 ```python
 import pandas as pd
@@ -44,9 +49,10 @@ import scipy.stats as ss
 from statsmodels.stats.outliers_influence import variance_inflation_factor as vif
 ```
 
+[🔝 Back to indice](#Indice)
 ---
 
-1. ## Dataset
+## Dataset
 
 Initially, I applied the log to "renda" to adjust its value to the model. This was a tactic used in previous work that brought benefits to interpretation.
 
