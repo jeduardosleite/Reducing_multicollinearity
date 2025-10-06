@@ -13,7 +13,7 @@
   - [Cooks distance](#cooks-distance)
   - [Hat_diag (leverage)](#hat_diag-leverage)
   - [Analysis of the two metrics](#analysis-of-the-two-metrics)
-  - [Why the 99th percentile?](#why-the-99th-percentile)
+- [Why the 99th percentile?](#why-the-99th-percentile)
 - [Suspects](#suspects)
 - [Multicollinearity](#multicollinearity)
   - [Matrix correlation](#matrix-correlation)
@@ -75,12 +75,16 @@ train = df[df['data_ref'] <= tres_meses]
 test = df[df['data_ref'] > tres_meses]
 ```
 
+[🔝 Back to indice](#Indice)
+---
+
 ## Model Distribution
 
 The data cluster around a central value, forming a bell-shaped pattern. Therefore, we can conclude a normal distribution. 
 
 <img width="592" height="291" alt="image" src="https://github.com/user-attachments/assets/d1709d05-00e6-49db-b266-bd17d32a3277" />
 
+[🔝 Back to indice](#Indice)
 ---
 
 ## Independence from waste
@@ -95,6 +99,7 @@ Among these variables, I highlight two that caught my attention:
 
 <img width="857" height="896" alt="image" src="https://github.com/user-attachments/assets/f92a9f31-c8b2-4637-970c-4ec3593e1327" />
 
+[🔝 Back to indice](#Indice)
 ---
 
 ## Outliers
@@ -110,6 +115,7 @@ An outlier becomes critical when the influence (measured by Cooks Distance) is h
 
 <img width="224" height="396" alt="image" src="https://github.com/user-attachments/assets/57535c2e-1a7f-44e0-8f5f-6c730c0ba9de" />
 
+[🔝 Back to indice](#Indice)
 ---
 
 ## Influence
@@ -143,12 +149,16 @@ suspeitos = resumo_influencia[
 ]
 ```
 
+[🔝 Back to indice](#Indice)
+---
+
 ## Why the 99th percentile?
 
 Since the dataset contains 150,000 rows, the 99th percentile aims to capture only the extreme cases, highlighting the truly influential cases without getting lost in the thousands of *mild suspicions*.
 
 Note that, previously, just over **5,000** suspects were identified. This percentile aims to filter potential cases within this universe, making the analysis more efficient and assertive.
 
+[🔝 Back to indice](#Indice)
 ---
 
 ## Suspects
@@ -163,6 +173,7 @@ new_test.loc[suspeitos.index]
 
 Originally, the dataset had **150.000** rows, now with the suspect filter, it has **507** rows, this making it more easly for analyse and interpretation.
 
+[🔝 Back to indice](#Indice)
 ---
 
 ## Multicollinearity
@@ -224,6 +235,7 @@ Firstly, i maked a table with values interpretation paramns. Then, i analyzed th
 | 16 | tipo_residencia_Governamental | -0.001923 | No correlation |
 | 15 | qtd_filhos_5 | -0.000756 | No correlation |
 
+[🔝 Back to indice](#Indice)
 ---
 
 ## VIF (Variance Inflation Factor)
@@ -296,6 +308,7 @@ The **result**: the ```VIFs``` original variables dropped drastically. I was to 
 
 <img width="276" height="573" alt="image" src="https://github.com/user-attachments/assets/ec607d89-4614-4458-9ebe-054e856124a6" />
 
+[🔝 Back to indice](#Indice)
 ---
 
 ## Final Conclusion
@@ -325,11 +338,3 @@ For the purposes of this analysis, the main result was achieved: reducing multic
 <img width="566" height="220" alt="image" src="https://github.com/user-attachments/assets/2cf44a00-5ad6-4344-af7c-9b8bab39901e" />
 
 <img width="569" height="222" alt="image" src="https://github.com/user-attachments/assets/3b6a61e4-b58c-4713-b72b-31f9f65220c7" />
-
-
-
-
-
-
-
-
